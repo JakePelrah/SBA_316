@@ -1,4 +1,4 @@
-function createHeader() {
+function createHeader(){
     const header = document.createElement('header')
 
     // create and style the nav
@@ -24,13 +24,15 @@ function createHeader() {
     navImg.style.marginRight = '1em'
     // bark when image is clicked
     navImg.addEventListener('click', bark)
-    navImg.style.cursor = 'pointer'
+    navImg.style.cursor='pointer'
 
+    
     // create navbar text
     const navBarText = document.createTextNode('Zelda the Pomeranian')
+    const navItems = [navImg, navBarText ]
 
     // construct the nav
-    [navImg, navBarText].forEach(node => navbarBrand.appendChild(node))
+    navItems.forEach(node=>navbarBrand.appendChild(node))
     containerDiv.appendChild(navbarBrand)
     navBar.appendChild(containerDiv)
     header.appendChild(navBar)
@@ -39,7 +41,7 @@ function createHeader() {
 }
 
 
-function bark() {
+function bark(){
     const randomBark = Math.floor(Math.random() * 4 + 1);
     console.log(randomBark)
     const audio = new Audio(`src/assets/audio/bark_${randomBark}.wav`)
