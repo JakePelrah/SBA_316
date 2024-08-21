@@ -19,3 +19,6 @@ Include a README file that contains a description of your application. 2%
 Reflection (Optional)
 Once you have completed your project, answer the following questions to help solidify your understanding of the process and its outcomes, as well as improve your ability to handle similar tasks in the future.
 Level of eort displayed in creativity, presentation, and user experience. 5%
+
+
+&#9989;
