@@ -29,9 +29,6 @@
     align-items: center !important;
 }
 
-#card_16 > img{
-    border: .5em dashed rgb(254, 1, 1) !important;
-}
 
 .validation-error{
     color: red !important;
