@@ -34,19 +34,35 @@
 
 
     <!-- Modal -->
-    <div class="modal fade" id="form-modal" tabindex="-1">
+    <div class="modal fade" id="form-modal" data-bs-backdrop="static" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Send me treats!</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    I'm always hungry and looking for delicious treats. If you want to send me some, fill out the
+                    form below and I'll get back to you! I'm on a strict diet, so I'll call you
+                    to see what treats you have.
+
+                    <form id="contact-form">
+                        <div class="mb-3 mt-4">
+                            <label for="exampleInputEmail1" class="form-label">First Name</label>
+                            <input type="name" class="form-control" id="first-name" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3 mt-4">
+                            <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                            <input type="name" class="form-control" id="last-name" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Phone Number</label>
+                            <input type="phone" class="form-control" id="phone-number">
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary">Submit</button>
                 </div>
             </div>
         </div>
