@@ -39,4 +39,6 @@ My webpage is dedicated to my dog Zelda. Event listeners were added to the navba
 
 &#9989; Include a README file that contains a description of your application. 2%
 
+&#9989; Level of effort displayed in creativity, presentation, and user experience. 5%
+
 
