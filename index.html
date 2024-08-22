@@ -33,12 +33,12 @@
 
 
 
-    <!-- Modal -->
+    <!-- contact modal -->
     <div class="modal fade" id="form-modal" data-bs-backdrop="static" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Send me treats!</h1>
+                    <h1 class="modal-title fs-5">Send me treats!</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -48,22 +48,24 @@
 
                     <form id="contact-form">
                         <div class="mb-3 mt-4">
-                            <label for="exampleInputEmail1" class="form-label">First Name</label>
-                            <input type="name" class="form-control" id="first-name" aria-describedby="emailHelp">
+                            <label for="first-name" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="first-name" required>
                         </div>
                         <div class="mb-3 mt-4">
-                            <label for="exampleInputEmail1" class="form-label">Last Name</label>
-                            <input type="name" class="form-control" id="last-name" aria-describedby="emailHelp">
+                            <label for="last-name" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="last-name" required>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Phone Number</label>
-                            <input type="phone" class="form-control" id="phone-number">
+                            <label for="telephone" class="form-label">Phone Number</label>
+                            <input id="telephone" type="tel" pattern="\d{10,10}" placeholder="5085555555"
+                                class="form-control" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-secondary">Submit</button>
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary">Submit</button>
-                </div>
+
             </div>
         </div>
     </div>
