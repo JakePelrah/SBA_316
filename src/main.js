@@ -129,37 +129,37 @@ function openWindow() {
 
 const firstName = document.getElementById('first-name')
 const firstError = document.getElementById('first-error')
-firstName.addEventListener('input', (evt)=>{
-    
-    if(firstName.validity.valid){
-        firstError.textContent=''
+firstName.addEventListener('input', (evt) => {
+
+    if (firstName.validity.valid) {
+        firstError.textContent = ''
     }
-    else{
-        firstError.textContent="first name must be at least two characters"
+    else {
+        firstError.textContent = "first name must be at least two characters"
     }
 })
 
 const lastName = document.getElementById('last-name')
 const lastError = document.getElementById('last-error')
-lastName.addEventListener('input', (evt)=>{
-    
-    if(lastName.validity.valid){
-        lastError.textContent=''
+lastName.addEventListener('input', (evt) => {
+
+    if (lastName.validity.valid) {
+        lastError.textContent = ''
     }
-    else{
-        lastError.textContent="last name must be at least two characters"
+    else {
+        lastError.textContent = "last name must be at least two characters"
     }
 })
 
-const tel = document.getElementById('last-name')
+const tel = document.getElementById('telephone')
 const telError = document.getElementById('tel-error')
-tel.addEventListener('input', (evt)=>{
-    
-    if(tel.validity.valid){
-        telError.textContent=''
+tel.addEventListener('input', (evt) => {
+
+    if (tel.validity.valid) {
+        telError.textContent = ''
     }
-    else{
-        telError.textContent="telephone must be 10 characters"
+    else {
+        telError.textContent = "telephone must be 10 characters"
     }
 })
 
