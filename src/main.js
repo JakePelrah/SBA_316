@@ -192,7 +192,11 @@ const favID = 'card_16'
 const favorite = document.getElementById('favorite')
 favorite.style.cursor = 'pointer'
 favorite.addEventListener('click', () => {
+    
     const favImg = document.getElementById('card_16')
+    const img = favImg.querySelector('.card-img-top')
+    img.style.border='.5em dashed red'
+    
     const rect = favImg.getBoundingClientRect()
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
