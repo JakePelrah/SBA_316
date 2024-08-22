@@ -3,6 +3,7 @@
     --text-color:wheat;
 }
 
+
 .bark{
     animation:bark 2s;
 }
@@ -26,6 +27,10 @@
 
     display: flex !important;
     align-items: center !important;
+}
+
+#card_16 > img{
+    border: .5em dashed rgb(254, 1, 1) !important;
 }
 
 

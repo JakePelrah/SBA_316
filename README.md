@@ -17,7 +17,7 @@
 &#9989; Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties. 5%
 Modify at least one attribute of an element in response to user interaction. 3%
 
-Register at least two dierent event listeners and create the associated event handler functions. 10%
+&#9989; Register at least two dierent event listeners and create the associated event handler functions. 10%
 
 Use at least two Browser Object Model (BOM) properties or methods. 3%
 
