@@ -48,16 +48,19 @@
                     <form id="contact-form">
                         <div class="mb-3 mt-4">
                             <label for="first-name" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="first-name" required>
+                            <input type="text" class="form-control" minlength="4" id="first-name" required>
+                            <div id="first-error" class="validation-error"></div>
                         </div>
                         <div class="mb-3 mt-4">
                             <label for="last-name" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="last-name" required>
+                            <input type="text" class="form-control" minlength="4" id="last-name" required>
+                            <div id="last-error" class="validation-error"></div>
                         </div>
                         <div class="mb-3">
                             <label for="telephone" class="form-label">Phone Number</label>
-                            <input id="telephone" type="tel" pattern="\d{10,10}" placeholder="5085555555"
+                            <input id="telephone" type="tel" minlength="10" pattern="\d{10,10}" placeholder="5085555555"
                                 class="form-control" required>
+                                <div id="tel-error" class="validation-error"></div>
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-secondary">Submit</button>

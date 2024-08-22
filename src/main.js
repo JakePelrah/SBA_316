@@ -12,19 +12,19 @@ function createHeader() {
     containerDiv.classList.add('container-fluid')
 
     const envelope = document.createElement('img')
-    envelope.src='src/assets/icons/envelope.svg'
+    envelope.src = 'src/assets/icons/envelope.svg'
     envelope.style.height = '3em'
-    envelope.style.marginLeft='.5em'
+    envelope.style.marginLeft = '.5em'
     envelope.style.filter = 'invert(85%) sepia(57%) saturate(220%) hue-rotate(331deg) brightness(98%) contrast(96%)';
-    envelope.style.cursor='pointer'
+    envelope.style.cursor = 'pointer'
     envelope.addEventListener('click', openModal)
 
 
     const wiki = document.createElement('img')
-    wiki.src ='src/assets/icons/wiki.svg'
-    wiki.style.height='3em'
-    wiki.style.filter='invert(85%) sepia(57%) saturate(220%) hue-rotate(331deg) brightness(98%) contrast(96%)';
-    wiki.style.cursor='pointer'
+    wiki.src = 'src/assets/icons/wiki.svg'
+    wiki.style.height = '3em'
+    wiki.style.filter = 'invert(85%) sepia(57%) saturate(220%) hue-rotate(331deg) brightness(98%) contrast(96%)';
+    wiki.style.cursor = 'pointer'
     wiki.addEventListener('click', openWindow)
 
 
@@ -78,7 +78,7 @@ function createMediaCardFragment(imgPath, id, video = false) {
     // create media card
     const card = document.createElement('div')
     card.classList.add('card')
-    card.id =`card_${id}`
+    card.id = `card_${id}`
 
     // create card image
     const cardImg = document.createElement('img')
@@ -114,16 +114,56 @@ function bark(target) {
 
 }
 
-function openModal(){
+function openModal() {
     const modalElem = document.getElementById('form-modal')
     const modal = new bootstrap.Modal(modalElem);
     modal.show()
     console.log('open')
 }
 
-function openWindow(){
+function openWindow() {
     window.open('https://en.wikipedia.org/wiki/Pomeranian_dog', '_blank')
 }
+
+//validation 
+
+const firstName = document.getElementById('first-name')
+const firstError = document.getElementById('first-error')
+firstName.addEventListener('input', (evt)=>{
+    
+    if(firstName.validity.valid){
+        firstError.textContent=''
+    }
+    else{
+        firstError.textContent="first name must be at least two characters"
+    }
+})
+
+const lastName = document.getElementById('last-name')
+const lastError = document.getElementById('last-error')
+lastName.addEventListener('input', (evt)=>{
+    
+    if(lastName.validity.valid){
+        lastError.textContent=''
+    }
+    else{
+        lastError.textContent="last name must be at least two characters"
+    }
+})
+
+const tel = document.getElementById('last-name')
+const telError = document.getElementById('tel-error')
+tel.addEventListener('input', (evt)=>{
+    
+    if(tel.validity.valid){
+        telError.textContent=''
+    }
+    else{
+        telError.textContent="telephone must be 10 characters"
+    }
+})
+
+
 
 // program setup
 const bootstrapCDN = `<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></link>`
@@ -150,16 +190,17 @@ likesSpan.firstChild.textContent += '\u{1F354}'
 
 const favID = 'card_16'
 const favorite = document.getElementById('favorite')
-favorite.addEventListener('click',()=>{
+favorite.style.cursor = 'pointer'
+favorite.addEventListener('click', () => {
     const favImg = document.getElementById('card_16')
     const rect = favImg.getBoundingClientRect()
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
+
     scrollTo({
-        top:rect.top + scrollTop,
-        behavior:'smooth'
+        top: rect.top + scrollTop,
+        behavior: 'smooth'
     })
-} )
+})
 
 
 
@@ -169,3 +210,5 @@ const cardGroup = document.getElementById('card-group')
 for (let i = 1; i < 24; i++) {
     cardGroup.appendChild(createMediaCardFragment(`src/assets/images/z_${i}.jpg`, i))
 }
+
+
