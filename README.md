@@ -1,3 +1,10 @@
+Description
+---
+My webpage is dedicated to my dog Zelda. Event listeners were added to the navbar icons ( dog, wiki, and envelope). I used window.open() to navigate to the WIKI for Pomeranians. If you click the black star, it will navigate to my favorite image of Zelda outlined in red dashes. This was acheived using the BOM method window scrollTo()
+
+
+
+
 &#9989; Cache at least one element using selectElementById. 5%
 
 &#9989; Cache at least one element using querySelector or querySelectorAll. 5%
