@@ -12,7 +12,7 @@
 
 &#9989; Use the DocumentFragment interface or HTML templating with the cloneNode method to create templated content.  2%
 
-Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent. 10%
+&#9989; Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent. 10%
 
 &#9989; Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties. 5%
 Modify at least one attribute of an element in response to user interaction. 3%

@@ -11,6 +11,13 @@ function createHeader() {
     const containerDiv = document.createElement('div')
     containerDiv.classList.add('container-fluid')
 
+    const envelope = document.createElement('img')
+    envelope.src='src/assets/icons/envelope.svg'
+    envelope.style.height = '3em'
+    envelope.style.filter = 'invert(85%) sepia(57%) saturate(220%) hue-rotate(331deg) brightness(98%) contrast(96%)';
+    envelope.style.cursor='pointer'
+    envelope.addEventListener('click', openModal)
+
     // create a navbar brand
     const navbarBrand = document.createElement('div')
     navbarBrand.classList.add('navbar-brand')
@@ -29,14 +36,16 @@ function createHeader() {
 
     // create navbar text
     const textSpan = document.createElement('span')
-    textSpan.id ="nav-text"
+    textSpan.id = "nav-text"
     textSpan.textContent = 'Zelda the Pomeranian'
 
-    const navItems = [navImg,textSpan]
+    const navItems = [navImg, textSpan]
 
     // construct the nav
     navItems.forEach(node => navbarBrand.appendChild(node))
     containerDiv.appendChild(navbarBrand)
+    containerDiv.appendChild(envelope)
+
     navBar.appendChild(containerDiv)
     header.appendChild(navBar)
 
@@ -59,7 +68,7 @@ function createMediaCardFragment(imgPath, video = false) {
     const cardImg = document.createElement('img')
     cardImg.classList.add('card-img-top')
     cardImg.src = imgPath
- 
+
     // create card body
     const cardBody = document.createElement('div')
     cardBody.classList.add('card-body')
@@ -76,20 +85,25 @@ function createMediaCardFragment(imgPath, video = false) {
 function bark(target) {
     target.classList.add('bark')
     const navText = document.getElementById('nav-text')
-    navText.textContent="WOOF"
+    navText.textContent = "Woof Woof"
     target.style.pointerEvents = 'none'
     const randomBark = Math.floor(Math.random() * 4 + 1);
     const audio = new Audio(`src/assets/audio/bark_${randomBark}.wav`)
     audio.addEventListener('ended', () => {
         target.classList.remove('bark')
         target.style.pointerEvents = 'auto'
-    navText.textContent="Zelda the Pomeranian"
-
+        navText.textContent = "Zelda the Pomeranian"
     })
     audio.play()
 
 }
 
+function openModal(){
+    const modalElem = document.getElementById('form-modal')
+    const modal = new bootstrap.Modal(modalElem);
+    modal.show()
+    console.log('open')
+}
 
 // program setup
 const bootstrapCDN = `<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></link>`
@@ -103,15 +117,15 @@ container.classList.add('mt-5')
 
 // about me
 const likesSpan = document.getElementById('likes')
-const likeCodes = [' \u{1F355}',' \u{1F464}',' \u{1F634}',' \u{1F436}' ]
+const likeCodes = [' \u{1F355}', ' \u{1F464}', ' \u{1F634}', ' \u{1F436}']
 
 let i = 0
-for(const sibling of likesSpan.children){
-    console.log(sibling.textContent+=likeCodes[i])
+for (const sibling of likesSpan.children) {
+    console.log(sibling.textContent += likeCodes[i])
     i++
 }
 // add a hamburger emoji
-likesSpan.firstChild.textContent+='\u{1F354}'
+likesSpan.firstChild.textContent += '\u{1F354}'
 
 
 
